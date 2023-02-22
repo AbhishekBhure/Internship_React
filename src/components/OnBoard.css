@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+.container1 {
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 40px;
+    background-color: #fff;
+    /* border-radius: 8px; */
+    box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999; 
+    -moz-box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999; 
+   -webkit-box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999;
+   
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    }
+
+    .form_container{
+      display: flex;
+    }
+
+    .container-left{
+      width: 700px;
+    }
+
+    .container-right{
+      width: 500px;
+    }
+    
+    .container-right > img{
+      position: absolute;
+      right: 0px;
+    }
+
+    
+    select { 
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    
+    label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="url"],
+    select{
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    /* border: none; */
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    }
+
+    input[type="date"] {
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 12px;
+width:100%;
+margin-bottom: 5px;
+margin:5px 10px;
+    }
+
+   
+    
+    select option {
+    color: #333;
+    }
+
+    .content{
+      width: 100%;
+      display: flex;
+    }
+
+    .right-content{
+      width: 520px;
+    }
+
+    .left-content{
+      width: 400px;
+    }
+
+    .left-content>img{
+      width: 100%;
+      height: 200px;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+
+    .date-content{
+      width: 100%;
+      display: flex;
+    }
+
+    .mid{
+      width: 200px;
+      height: 150px;
+    }
+
+    .mid > img{
+      width: 100%;
+      height: 100%;
+    }
+    
+    .onboardsubmitbtn[type="submit"] {
+    background-color: #3684d6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    
+    .onboardsubmitbtn[type="submit"]:hover {
+    background-color: #0a63c2;
+    }
+
+    
+   
+    @media only screen and (max-width: 480px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    input[type="date"],
+    button[type="submit"] {
+    width: 100%;
+    margin-right: 0;
+    }
+    }

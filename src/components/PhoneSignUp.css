@@ -1,0 +1,30 @@
+.loginSignUpForm{
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .phoneLogin-content{
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .left-phone-content{
+    border-right: 1px solid #e7d2d2;
+
+  }
+  .right-phone-content > img{
+    width: 300px;
+    height: 300px;
+  }
+  #recaptcha-container{
+    margin-left: 20px;
+    margin-top: 10px;
+  }
