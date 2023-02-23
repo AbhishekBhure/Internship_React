@@ -89,10 +89,10 @@ const PhoneSignUp = () => {
                   ></Form.Control>
                 </Form.Group>
                 <div className="button-right">
-                  <Link to="/">
+                  <Link to="/" style={{ textDecoration: "none" }}>
                     <Button variant="secondary">Cancel</Button> &nbsp;
                   </Link>
-                  <Button variant="primary" type="submit">
+                  <Button className="otpbtn" variant="primary" type="submit">
                     Verify Otp
                   </Button>
                 </div>

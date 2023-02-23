@@ -278,13 +278,15 @@ const OnBoard = () => {
             </div>
           </form>
         </div>
-        <button
-          className="onboardsubmitbtn mt-2"
-          type="submit"
-          onClick={submitData}
-        >
-          Save Data
-        </button>
+        <div className="savebtn">
+          <button
+            className="onboardsubmitbtn mt-2"
+            type="submit"
+            onClick={submitData}
+          >
+            Save Data
+          </button>
+        </div>
       </div>
     </div>
   );

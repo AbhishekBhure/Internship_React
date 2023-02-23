@@ -226,9 +226,15 @@ margin:5px 10px;
         height: 240px;
       }
 
+      .savebtn{
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+
       .onboardsubmitbtn[type="submit"]{
         width: 120px!important;
-        /* margin: 10px 180px; */
+        margin: 10px auto !important;
       }
     input[type="text"],
     input[type="email"],
