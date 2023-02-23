@@ -21,6 +21,12 @@ const OnBoard = () => {
     pDes: "",
     start_date: "",
     end_date: "",
+    cName: "",
+    oName: "",
+    cUrl: "",
+    issue_date: "",
+    courseName: "",
+    orgName: "",
   });
   const { user, logOut } = useUserAuth();
 
@@ -51,6 +57,12 @@ const OnBoard = () => {
       pDes,
       start_date,
       end_date,
+      cName,
+      oName,
+      cUrl,
+      issue_date,
+      courseName,
+      orgName,
     } = userData;
     if (
       fName &&
@@ -62,7 +74,13 @@ const OnBoard = () => {
       pUrl &&
       pDes &&
       start_date &&
-      end_date
+      end_date &&
+      cName &&
+      oName &&
+      cUrl &&
+      issue_date &&
+      courseName &&
+      orgName
     ) {
       const res = await fetch(
         "https://internship-67bff-default-rtdb.firebaseio.com/onBoardDatas.json",
@@ -82,6 +100,12 @@ const OnBoard = () => {
             pDes,
             start_date,
             end_date,
+            cName,
+            oName,
+            cUrl,
+            issue_date,
+            courseName,
+            orgName,
           }),
         }
       );
@@ -97,6 +121,12 @@ const OnBoard = () => {
           pDes: "",
           start_date: "",
           end_date: "",
+          cName: "",
+          oName: "",
+          cUrl: "",
+          issue_date: "",
+          courseName: "",
+          orgName: "",
         });
         alert("data Submitted");
       } else {
@@ -198,7 +228,7 @@ const OnBoard = () => {
         </div>
         <hr />
         <div className="form_conatiner">
-          <h4>Add Project</h4>
+          <h4 style={{ padding: "0px 16px" }}>Add Project</h4>
           <form method="POST">
             <label htmlFor="projectTitle">Project Title:</label>
             <input
@@ -276,6 +306,78 @@ const OnBoard = () => {
                 />
               </div>
             </div>
+          </form>
+        </div>
+        <hr />
+        <div className="form_conatiner">
+          <h4 style={{ padding: "0px 16px" }}>Add Licenses & Certifications</h4>
+          <form method="POST">
+            <label htmlFor="projectTitle">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="cName"
+              placeholder="enter project name"
+              value={userData.cName}
+              onChange={postUserData}
+              required
+            />
+            <label htmlFor="projectTitle">Issuing Organisation:</label>
+            <input
+              type="text"
+              id="name"
+              name="oName"
+              placeholder="enter project name"
+              value={userData.oName}
+              onChange={postUserData}
+              required
+            />
+            <label htmlFor="projectURL">Certificate Link:</label>
+            <input
+              type="url"
+              id="name"
+              name="cUrl"
+              placeholder="enter project URL"
+              value={userData.cUrl}
+              onChange={postUserData}
+              required
+            />
+            <div className="date-content">
+              <div className="left">
+                <label htmlFor="start_date">Issue Date:</label>
+                <input
+                  type="date"
+                  id="start_date"
+                  name="issue_date"
+                  placeholder="enter start date"
+                  value={userData.issue_date}
+                  onChange={postUserData}
+                  required
+                />
+              </div>
+            </div>
+            <hr />
+            <h4>Add Course</h4>
+            <label htmlFor="projectTitle">Course Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="courseName"
+              placeholder="enter project name"
+              value={userData.courseName}
+              onChange={postUserData}
+              required
+            />
+            <label htmlFor="projectTitle">Issusing Organisation:</label>
+            <input
+              type="text"
+              id="name"
+              name="orgName"
+              placeholder="enter project name"
+              value={userData.orgName}
+              onChange={postUserData}
+              required
+            />
           </form>
         </div>
         <div className="savebtn">
