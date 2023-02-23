@@ -33,7 +33,7 @@ const Login = () => {
                 LOGIN
               </h2>
               {error && <Alert variant="danger">{error}</Alert>}
-              <Form onSubmit={handleSubmit}>
+              <Form className="logform" onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control
                     type="email"
@@ -51,22 +51,14 @@ const Login = () => {
                 </Form.Group>
 
                 <div className="d-grid gap-2">
-                  <Button
-                    variant="primary"
-                    type="Submit"
-                    style={{ margin: "0px 60px" }}
-                  >
+                  <Button className="logbtn" variant="primary" type="Submit">
                     Log In
                   </Button>
                 </div>
                 <Link to="/phonesignup" style={{ textDecoration: "none" }}>
                   <div className="d-grid gap-2 mt-2">
-                    <Button
-                      variant="primary"
-                      type="Submit"
-                      style={{ margin: "0px 58px" }}
-                    >
-                      LogIn With Phone Number
+                    <Button className="logbtn2" variant="primary" type="Submit">
+                      Phone Number
                     </Button>
                   </div>
                 </Link>

@@ -28,3 +28,33 @@
     margin-left: 20px;
     margin-top: 10px;
   }
+
+  @media only screen and (max-width:480px) {
+    .phoneLogin-content{
+      padding: 10px 0px;
+    width: 100%;
+      background-color: #fff;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+    }
+    .box{
+      width: 100% !important;
+    }
+    .p-4 {
+      padding: 0rem!important;
+  }
+    .left-phone-content{
+      border-top: 1px solid #e7d2d2;
+      border-right: 0px;
+    }
+    .right-phone-content > img{
+      width: 200px;
+      height: 200px;
+    }
+    /* .logbtn{
+      width: 90px;
+      margin: 0px auto;
+    } */
+
+  }

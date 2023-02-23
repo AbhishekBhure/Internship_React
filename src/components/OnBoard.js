@@ -110,25 +110,29 @@ const OnBoard = () => {
     <div>
       <Navbar bg="light" expand="lg" fixed="top">
         <Container>
-          <Navbar.Brand href="#home">Internship</Navbar.Brand>
+          <Navbar.Brand href="#home" className="pl-2">
+            Internship
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto"></Nav>
+            <Nav className="me-auto">
+              <span className="nav-mb-top pl-2">Hi, {user && user.email}</span>
+              <Button
+                style={{ backgroundColor: "#3684d6" }}
+                className="ml-2 logoutbtn nav-mb-top"
+                onClick={handleLogOut}
+                variant="primary"
+                type="Submit"
+              >
+                Log Out
+              </Button>
+            </Nav>
           </Navbar.Collapse>
-          <span>Hi, {user && user.email}</span>
-          <Button
-            style={{ backgroundColor: "#3684d6" }}
-            className="ml-2"
-            onClick={handleLogOut}
-            variant="primary"
-            type="Submit"
-          >
-            Log Out
-          </Button>
+          <span className="nav-top">Hi, {user && user.email}</span>
         </Container>
       </Navbar>
       <div className="container1">
-        <h1>Onboarding Form</h1>
+        <h1 className="mt-5">Onboarding Form</h1>
         <div className="form_container">
           <div className="container-left">
             <form className="form1" method="POST">
@@ -219,21 +223,24 @@ const OnBoard = () => {
             <div className="content">
               <div className="right-content">
                 <label htmlFor="projectDes">Project Description:</label>
-                <textarea
-                  style={{
-                    position: "relative",
-                    display: "block",
-                    outline: "none",
-                    padding: "10px",
-                    border: "1px solid #ccc",
-                  }}
-                  name="pDes"
-                  id=""
-                  cols="60"
-                  rows="5"
-                  onChange={postUserData}
-                  value={userData.pDes}
-                ></textarea>
+                <div className="mb-textArea">
+                  <textarea
+                    style={{
+                      position: "relative",
+                      display: "block",
+                      outline: "none",
+                      padding: "10px",
+                      border: "1px solid #ccc",
+                      width: "100%",
+                    }}
+                    name="pDes"
+                    id=""
+                    cols="60"
+                    rows="5"
+                    onChange={postUserData}
+                    value={userData.pDes}
+                  ></textarea>
+                </div>
               </div>
               <div className="left-content">
                 <img src={sys_img} alt="sys_img" />
@@ -271,7 +278,11 @@ const OnBoard = () => {
             </div>
           </form>
         </div>
-        <button className="onboardsubmitbtn" type="submit" onClick={submitData}>
+        <button
+          className="onboardsubmitbtn mt-2"
+          type="submit"
+          onClick={submitData}
+        >
           Save Data
         </button>
       </div>

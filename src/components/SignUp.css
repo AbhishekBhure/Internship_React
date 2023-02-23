@@ -10,6 +10,7 @@
   }
   
   .signup-content{
+    width: 55rem;
     padding: 20px;
     background-color: #fff;
     display: flex;
@@ -17,7 +18,7 @@
   }
 
   .left-signup-content{
-    width: 400px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,8 +26,12 @@
     border-right: 1px solid #e7d2d2;
   }
 
+  .right-signup-content{
+    width: 50%;
+  }
+
   .right-signup-content > img{
-    width: 500px;
+    width: 100%;
     height: 300px;
   }
 
@@ -45,4 +50,37 @@
   .g-btn > div > svg {
     width: 40px !important;
     height: 38px !important;
+  }
+
+  @media only screen and (max-width: 480px) {
+    .loginSignUpForm{
+      height: 100vh;
+    }
+    .signup-content{
+      padding: 0px;
+    width: 100%;
+      background-color: #fff;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+    }
+    .box{
+      width: 100% !important;
+    }
+    .p-4 {
+      padding: 0rem!important;
+  }
+    .left-signup-content{
+      border-top: 1px solid #e7d2d2;
+      border-right: 0px;
+    }
+
+    .right-signup-content > img{
+      height: 165px;
+    }
+    .logbtn{
+      width: 90px;
+      margin: 0px auto;
+    }
+    
   }

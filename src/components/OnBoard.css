@@ -4,7 +4,7 @@
   }
   
 .container1 {
-    max-width: 1000px;
+    max-width: 70vw;
     position: relative;
     margin: 0 auto;
     margin-top: 10px;
@@ -146,9 +146,90 @@ margin:5px 10px;
     background-color: #0a63c2;
     }
 
-    
+    .nav-mb-top{
+      display: none;
+    }
+    .nav-top{
+      display: block;
+    }
    
     @media only screen and (max-width: 480px) {
+      .container1{
+        max-width: 100vw;
+        padding: 0px;
+      }
+      .nav-mb-top{
+        display: block;
+      }
+      .nav-top{
+        display: none !important;
+      }
+      .logoutbtn{
+        width: 90px !important;
+      }
+
+      .form_container{
+        flex-direction: column-reverse;
+      }
+
+      .container-left{
+        width: 100%;
+        /* padding: 0px 10px ; */
+      }
+
+      form{
+        padding: 0px 10px;
+      }
+
+      .container-right{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container-right>img{
+        width: 100%;
+       position: relative;
+       margin-right: 95px;
+      }
+
+      .content{
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .right-content{
+        width: 100%;
+      }
+
+      .left-content{
+        width: 100%;
+      }
+
+      .left-content  > img{
+        width: 100%;
+      }
+      .mb-textArea{
+        width: 100%;
+      }
+
+      .date-content{
+        flex-wrap: wrap;
+        padding: 0px 10px;
+      }
+
+      .left, .right{
+        width: 100%;
+      }
+      .mid{
+        width: 80%;
+        height: 240px;
+      }
+
+      .onboardsubmitbtn[type="submit"]{
+        width: 120px!important;
+        /* margin: 10px 180px; */
+      }
     input[type="text"],
     input[type="email"],
     input[type="password"],
