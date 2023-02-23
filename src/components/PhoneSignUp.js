@@ -72,7 +72,7 @@ const PhoneSignUp = () => {
                   <Link to="/" style={{ textDecoration: "none" }}>
                     <Button variant="secondary">Cancel</Button> &nbsp;
                   </Link>
-                  <Button className="logbtn" variant="primary" type="submit">
+                  <Button className="otpbtn" variant="primary" type="submit">
                     Send Otp
                   </Button>
                 </div>
